@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="net.thalerit.myapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="net.thalerit.myapplication.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="net.thalerit.myapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_nav_other"
+            app:destination="@id/nav_other" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_nav_other2"
+            app:destination="@id/nav_other2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_other"
+        android:name="net.thalerit.myapplication.ui.slideshow.AnotherFragment"
+        android:label="@string/other"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_other2"
+        android:name="net.thalerit.myapplication.ui.slideshow.AnotherFragment2"
+        android:label="@string/other2"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
